@@ -24,7 +24,7 @@ namespace Stopwatch
         {
             InitializeComponent();
             fullClockValue = "00:00";
-            if (File.Exists(filePath))
+            if (!File.Exists(filePath))
             {
                 File.Create(filePath);
             }
