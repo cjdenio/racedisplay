@@ -76,5 +76,19 @@ namespace Stopwatch
             clockText.Text = fullClockValue;
             File.WriteAllText("C:/Users/cjden/Desktop/clock.txt", fullClockValue);
         }
+
+        private void updateButton_Click(object sender, EventArgs e)
+        {
+            /*if (!File.Exists("C:/Users/cjden/Desktop/currentContestant.txt"))
+            {
+                File.Create("C:/Users/cjden/Desktop/currentContestant.txt");
+            }
+            if (!File.Exists("C:/Users/cjden/Desktop/ageGroup.txt"))
+            {
+                File.Create("C:/Users/cjden/Desktop/ageGroup.txt");
+            }*/
+            File.WriteAllText("C:/Users/cjden/Desktop/currentContestant.txt", contestantTextBox.Text);
+            File.WriteAllText("C:/Users/cjden/Desktop/ageGroup.txt", ageGroupTextBox.Text);
+        }
     }
 }
