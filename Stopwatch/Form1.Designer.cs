@@ -38,6 +38,9 @@
             this.contestantLabel = new System.Windows.Forms.Label();
             this.ageGroupLabel = new System.Windows.Forms.Label();
             this.updateButton = new System.Windows.Forms.Button();
+            this.saveTimeButton = new System.Windows.Forms.Button();
+            this.clearDataButton = new System.Windows.Forms.Button();
+            this.clearScreenButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // clockText
@@ -120,11 +123,47 @@
             this.updateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateButton.Location = new System.Drawing.Point(12, 109);
             this.updateButton.Name = "updateButton";
-            this.updateButton.Size = new System.Drawing.Size(131, 35);
+            this.updateButton.Size = new System.Drawing.Size(153, 35);
             this.updateButton.TabIndex = 7;
-            this.updateButton.Text = "Update Data";
+            this.updateButton.Text = "Update Screen";
             this.updateButton.UseVisualStyleBackColor = true;
             this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
+            // 
+            // saveTimeButton
+            // 
+            this.saveTimeButton.AutoSize = true;
+            this.saveTimeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveTimeButton.Location = new System.Drawing.Point(425, 111);
+            this.saveTimeButton.Name = "saveTimeButton";
+            this.saveTimeButton.Size = new System.Drawing.Size(153, 35);
+            this.saveTimeButton.TabIndex = 8;
+            this.saveTimeButton.Text = "Save Data";
+            this.saveTimeButton.UseVisualStyleBackColor = true;
+            this.saveTimeButton.Click += new System.EventHandler(this.saveTimeButton_Click);
+            // 
+            // clearDataButton
+            // 
+            this.clearDataButton.AutoSize = true;
+            this.clearDataButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearDataButton.Location = new System.Drawing.Point(425, 70);
+            this.clearDataButton.Name = "clearDataButton";
+            this.clearDataButton.Size = new System.Drawing.Size(153, 35);
+            this.clearDataButton.TabIndex = 9;
+            this.clearDataButton.Text = "Clear Saves";
+            this.clearDataButton.UseVisualStyleBackColor = true;
+            this.clearDataButton.Click += new System.EventHandler(this.clearDataButton_Click);
+            // 
+            // clearScreenButton
+            // 
+            this.clearScreenButton.AutoSize = true;
+            this.clearScreenButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearScreenButton.Location = new System.Drawing.Point(12, 68);
+            this.clearScreenButton.Name = "clearScreenButton";
+            this.clearScreenButton.Size = new System.Drawing.Size(153, 35);
+            this.clearScreenButton.TabIndex = 10;
+            this.clearScreenButton.Text = "Clear Screen";
+            this.clearScreenButton.UseVisualStyleBackColor = true;
+            this.clearScreenButton.Click += new System.EventHandler(this.clearScreenButton_Click);
             // 
             // Form1
             // 
@@ -132,6 +171,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(590, 376);
+            this.Controls.Add(this.clearScreenButton);
+            this.Controls.Add(this.clearDataButton);
+            this.Controls.Add(this.saveTimeButton);
             this.Controls.Add(this.updateButton);
             this.Controls.Add(this.ageGroupLabel);
             this.Controls.Add(this.contestantLabel);
@@ -158,6 +200,9 @@
         private System.Windows.Forms.Label contestantLabel;
         private System.Windows.Forms.Label ageGroupLabel;
         private System.Windows.Forms.Button updateButton;
+        private System.Windows.Forms.Button saveTimeButton;
+        private System.Windows.Forms.Button clearDataButton;
+        private System.Windows.Forms.Button clearScreenButton;
     }
 }
 

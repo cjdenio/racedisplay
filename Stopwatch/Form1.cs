@@ -14,7 +14,10 @@ namespace Stopwatch
 {
     public partial class Form1 : Form
     {
-        string filePath = "C:/Users/cjden/Desktop/clock.txt";
+        const string clockFilePath = "Output/clock.txt";
+        const string ageGroupFilePath = "Output/ageGroup.txt";
+        const string contestantFilePath = "Output/currentContestant.txt";
+        const string savedTimesFilePath = "Output/savedTimes.txt";
         int rawTimerValue = 0;
         int minutes = 0;
         int seconds;
@@ -24,11 +27,12 @@ namespace Stopwatch
         {
             InitializeComponent();
             fullClockValue = "00:00";
-            if (!File.Exists(filePath))
+            /*if (!File.Exists(clockFilePath))
             {
-                File.Create(filePath);
-            }
-            File.WriteAllText(filePath, fullClockValue);
+                File.Create(clockFilePath);
+            }*/
+            
+            File.WriteAllText(clockFilePath, fullClockValue);
         }
         
         private void timer_Tick(object sender, EventArgs e)
@@ -46,7 +50,7 @@ namespace Stopwatch
             //Ternary operator used to add a 0 before values with only one character
             fullClockValue = (minutes.ToString().Length == 1 ? "0" + minutes.ToString() : minutes.ToString()) + ":" + (seconds.ToString().Length == 1 ? "0"+seconds.ToString() : seconds.ToString());
             clockText.Text = fullClockValue;
-            File.WriteAllText("C:/Users/cjden/Desktop/clock.txt", fullClockValue);
+            File.WriteAllText(clockFilePath, fullClockValue);
         }
         bool isActive = false;
         private void startButton_Click(object sender, EventArgs e)
@@ -74,7 +78,7 @@ namespace Stopwatch
             timer.Stop();
             fullClockValue = "00:00";
             clockText.Text = fullClockValue;
-            File.WriteAllText("C:/Users/cjden/Desktop/clock.txt", fullClockValue);
+            File.WriteAllText(clockFilePath, fullClockValue);
         }
 
         private void updateButton_Click(object sender, EventArgs e)
@@ -87,8 +91,35 @@ namespace Stopwatch
             {
                 File.Create("C:/Users/cjden/Desktop/ageGroup.txt");
             }*/
-            File.WriteAllText("C:/Users/cjden/Desktop/currentContestant.txt", contestantTextBox.Text);
-            File.WriteAllText("C:/Users/cjden/Desktop/ageGroup.txt", ageGroupTextBox.Text);
+            File.WriteAllText(contestantFilePath, contestantTextBox.Text);
+            File.WriteAllText(ageGroupFilePath, ageGroupTextBox.Text);
+        }
+        private void saveTime()
+        {
+            // Who knew? File.AppendAllText automatically creates files.
+            /*if (!File.Exists(savedTimesPath))
+            {
+                File.Create(savedTimesPath);
+            }*/
+            File.AppendAllText(savedTimesFilePath, contestantTextBox.Text + '\t' + ageGroupTextBox.Text + '\t' + clockText.Text + "\r\n");
+        }
+
+        private void saveTimeButton_Click(object sender, EventArgs e)
+        {
+            saveTime();
+        }
+
+        private void clearDataButton_Click(object sender, EventArgs e)
+        {
+            File.WriteAllText(savedTimesFilePath, "");
+        }
+
+        private void clearScreenButton_Click(object sender, EventArgs e)
+        {
+            contestantTextBox.Text = "";
+            ageGroupTextBox.Text = "";
+            File.WriteAllText(contestantFilePath, "");
+            File.WriteAllText(ageGroupFilePath, "");
         }
     }
 }
