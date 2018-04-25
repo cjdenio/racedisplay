@@ -31,7 +31,8 @@ namespace Stopwatch
             {
                 File.Create(clockFilePath);
             }*/
-            
+            Directory.CreateDirectory("Output");
+
             File.WriteAllText(clockFilePath, fullClockValue);
         }
         
