@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2005
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stopwatch", "Stopwatch\Stopwatch.csproj", "{F57D8FED-9E71-4175-8295-F92151416856}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RaceDisplay", "Stopwatch\RaceDisplay.csproj", "{F57D8FED-9E71-4175-8295-F92151416856}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Installer", "Installer\Installer.vdproj", "{EFB086AF-66A1-48DB-A0D0-A0038DA3C6BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RaceDisplay WPF", "RaceDisplay\RaceDisplay WPF.csproj", "{872BD89B-7BBA-4A9B-AB90-213D1359D47B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,12 @@ Global
 		{F57D8FED-9E71-4175-8295-F92151416856}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F57D8FED-9E71-4175-8295-F92151416856}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F57D8FED-9E71-4175-8295-F92151416856}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFB086AF-66A1-48DB-A0D0-A0038DA3C6BB}.Debug|Any CPU.ActiveCfg = Debug
+		{EFB086AF-66A1-48DB-A0D0-A0038DA3C6BB}.Release|Any CPU.ActiveCfg = Release
+		{872BD89B-7BBA-4A9B-AB90-213D1359D47B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{872BD89B-7BBA-4A9B-AB90-213D1359D47B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{872BD89B-7BBA-4A9B-AB90-213D1359D47B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{872BD89B-7BBA-4A9B-AB90-213D1359D47B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

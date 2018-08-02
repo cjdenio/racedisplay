@@ -41,7 +41,9 @@
             this.updateButton = new System.Windows.Forms.Button();
             this.saveTimeButton = new System.Windows.Forms.Button();
             this.clearDataButton = new System.Windows.Forms.Button();
+            this.outputButton = new System.Windows.Forms.Button();
             this.clearScreenButton = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // clockText
@@ -124,9 +126,9 @@
             this.updateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateButton.Location = new System.Drawing.Point(12, 109);
             this.updateButton.Name = "updateButton";
-            this.updateButton.Size = new System.Drawing.Size(153, 35);
+            this.updateButton.Size = new System.Drawing.Size(154, 35);
             this.updateButton.TabIndex = 7;
-            this.updateButton.Text = "Update Screen";
+            this.updateButton.Text = "Update Display";
             this.updateButton.UseVisualStyleBackColor = true;
             this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
             // 
@@ -154,6 +156,16 @@
             this.clearDataButton.UseVisualStyleBackColor = true;
             this.clearDataButton.Click += new System.EventHandler(this.clearDataButton_Click);
             // 
+            // outputButton
+            // 
+            this.outputButton.Location = new System.Drawing.Point(503, 341);
+            this.outputButton.Name = "outputButton";
+            this.outputButton.Size = new System.Drawing.Size(75, 23);
+            this.outputButton.TabIndex = 12;
+            this.outputButton.Text = "Output on";
+            this.outputButton.UseVisualStyleBackColor = true;
+            this.outputButton.Click += new System.EventHandler(this.outputButton_Click);
+            // 
             // clearScreenButton
             // 
             this.clearScreenButton.AutoSize = true;
@@ -162,9 +174,24 @@
             this.clearScreenButton.Name = "clearScreenButton";
             this.clearScreenButton.Size = new System.Drawing.Size(153, 35);
             this.clearScreenButton.TabIndex = 10;
-            this.clearScreenButton.Text = "Clear Screen";
+            this.clearScreenButton.Text = "Clear Display";
             this.clearScreenButton.UseVisualStyleBackColor = true;
             this.clearScreenButton.Click += new System.EventHandler(this.clearScreenButton_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Display 0",
+            "Display 1",
+            "Display 2",
+            "Display 3"});
+            this.comboBox1.Location = new System.Drawing.Point(360, 343);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 13;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // Form1
             // 
@@ -172,6 +199,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(590, 376);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.outputButton);
             this.Controls.Add(this.clearScreenButton);
             this.Controls.Add(this.clearDataButton);
             this.Controls.Add(this.saveTimeButton);
@@ -185,7 +214,7 @@
             this.Controls.Add(this.clockText);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Stopwatch";
+            this.Text = "RaceDisplay";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,7 +233,9 @@
         private System.Windows.Forms.Button updateButton;
         private System.Windows.Forms.Button saveTimeButton;
         private System.Windows.Forms.Button clearDataButton;
+        private System.Windows.Forms.Button outputButton;
         private System.Windows.Forms.Button clearScreenButton;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 
