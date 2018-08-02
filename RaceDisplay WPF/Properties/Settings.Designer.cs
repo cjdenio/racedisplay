@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Stopwatch.Properties
+namespace RaceDisplay.Properties
 {
 
 
